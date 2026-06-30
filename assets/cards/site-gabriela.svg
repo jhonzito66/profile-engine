@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 168" width="340" height="168" role="img" aria-label="Site Gabriela">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 172" width="340" height="172" role="img" aria-label="Site Gabriela">
   <defs>
-    <linearGradient id="grad-site-gabriela" x1="0" y1="0" x2="340" y2="0">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#818CF8"/>
+    <linearGradient id="g-site-gabriela" x1="0" y1="0" x2="340" y2="0">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FB923C"/>
     </linearGradient>
   </defs>
-  <rect width="340" height="168" rx="10" fill="#0B0F19" stroke="#1F2937" stroke-width="1"/>
-  <rect width="340" height="3" rx="10" fill="url(#grad-site-gabriela)"/>
-  <text x="20" y="40" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#F9FAFB">Site Gabriela</text>
-  <text x="20" y="62" font-family="system-ui, sans-serif" font-size="12" fill="#9CA3AF">Production Web App</text>
-  <rect x="20" y="96" width="88" height="24" rx="5" fill="#111827" stroke="#1F2937"/>
-  <text x="64" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#9CA3AF" text-anchor="middle">TypeScript</text>
-  <rect x="116" y="96" width="88" height="24" rx="5" fill="#111827" stroke="#1F2937"/>
-  <text x="160" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#9CA3AF" text-anchor="middle">React</text>
-  <rect x="212" y="96" width="88" height="24" rx="5" fill="#111827" stroke="#1F2937"/>
-  <text x="256" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#9CA3AF" text-anchor="middle">Vercel</text>
-  <line x1="20" y1="132" x2="320" y2="132" stroke="#1F2937" stroke-width="1"/>
-  <text x="20" y="154" font-family="system-ui, sans-serif" font-size="12" fill="#6366F1">Open →</text>
+  <rect width="340" height="172" rx="10" fill="#1A1A1A" stroke="#404040" stroke-width="1"/>
+  <rect width="340" height="4" rx="10" fill="url(#g-site-gabriela)"/>
+  <text x="20" y="42" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Site Gabriela</text>
+  <text x="20" y="64" font-family="system-ui, sans-serif" font-size="12" fill="#A3A3A3">Production Web App</text>
+  <rect x="20" y="94" width="88" height="26" rx="5" fill="#2D2D2D" stroke="#404040"/>
+  <text x="64" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#A3A3A3" text-anchor="middle">TypeScript</text>
+  <rect x="116" y="94" width="88" height="26" rx="5" fill="#2D2D2D" stroke="#404040"/>
+  <text x="160" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#A3A3A3" text-anchor="middle">React</text>
+  <rect x="212" y="94" width="88" height="26" rx="5" fill="#2D2D2D" stroke="#404040"/>
+  <text x="256" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#A3A3A3" text-anchor="middle">Vercel</text>
+  <line x1="20" y1="134" x2="320" y2="134" stroke="#404040" stroke-width="1"/>
+  <text x="20" y="156" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#F97316">Open →</text>
 </svg>

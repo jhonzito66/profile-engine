@@ -25,11 +25,9 @@
     </pattern>
   </defs>
 
-  <!-- Background -->
   <rect width="800" height="220" fill="url(#bgGrad)"/>
   <rect width="800" height="220" fill="url(#dotGrid)" opacity="0.6"/>
 
-  <!-- Particles layer (embedded) -->
   <g opacity="0.4" stroke="#6366F1" stroke-width="0.5" fill="none">
     <line x1="60" y1="180" x2="140" y2="120"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="6s" repeatCount="indefinite"/></line>
     <line x1="140" y1="120" x2="220" y2="170"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="7s" repeatCount="indefinite"/></line>
@@ -44,45 +42,36 @@
     <circle cx="380" cy="160" r="2" opacity="0.7"/>
   </g>
 
-  <!-- Top border accent -->
   <rect x="0" y="0" width="800" height="2" fill="url(#accentGrad)"/>
   <rect x="0" y="218" width="800" height="2" fill="url(#accentGrad)" opacity="0.4"/>
 
-  <!-- Scan line -->
   <rect x="-20" y="0" width="4" height="220" fill="#6366F1" opacity="0.15">
     <animate attributeName="x" from="-20" to="820" dur="3s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Main content -->
   <g clip-path="url(#scanClip)">
-    <text x="48" y="78" font-family="'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="700" fill="#F9FAFB" filter="url(#nameGlow)">João Pedro</text>
+    <text x="48" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="36" font-weight="700" fill="#F9FAFB" filter="url(#nameGlow)">João Pedro</text>
   </g>
-  <text x="48" y="78" font-family="'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="700" fill="#F9FAFB" opacity="0">João Pedro<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2s" fill="freeze"/></text>
+  <text x="48" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="36" font-weight="700" fill="#F9FAFB" opacity="0">João Pedro<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2s" fill="freeze"/></text>
 
-  <!-- Title + cursor -->
-  <text x="48" y="112" font-family="'Segoe UI', system-ui, monospace" font-size="16" fill="#9CA3AF">Full Stack Engineer</text>
-  <rect x="248" y="98" width="10" height="18" fill="#6366F1">
+  <text x="48" y="112" font-family="Segoe UI, system-ui, monospace" font-size="16" fill="#9CA3AF">Full Stack Engineer</text>
+  <rect x="236.5" y="98" width="10" height="18" fill="#6366F1">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Online badge -->
   <circle cx="58" cy="138" r="4" fill="#22C55E">
     <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
   </circle>
-  <text x="70" y="142" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#9CA3AF">Online</text>
+  <text x="70" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#9CA3AF">Online</text>
 
-  <!-- Side panel -->
   <rect x="560" y="32" width="210" height="156" rx="8" fill="#111827" stroke="#1F2937" stroke-width="1"/>
   <rect x="560" y="32" width="210" height="3" rx="8" fill="url(#accentGrad)"/>
 
-  <text x="576" y="58" font-family="'Segoe UI', system-ui, monospace" font-size="10" fill="#9CA3AF">STATUS</text>
-  <text x="576" y="76" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#F9FAFB">Building</text>
-
-  <text x="576" y="98" font-family="'Segoe UI', system-ui, monospace" font-size="10" fill="#9CA3AF">LOCATION</text>
-  <text x="576" y="116" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#F9FAFB">Brazil</text>
-
-  <text x="576" y="138" font-family="'Segoe UI', system-ui, monospace" font-size="10" fill="#9CA3AF">FOCUS</text>
-  <text x="576" y="156" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#818CF8">Backend • Mobile • Cloud</text>
-
-  <text x="576" y="178" font-family="'Segoe UI', system-ui, monospace" font-size="10" fill="#9CA3AF">@jhonzito66</text>
+  <text x="576" y="58" font-family="Segoe UI, system-ui, monospace" font-size="10" fill="#9CA3AF">STATUS</text>
+  <text x="576" y="76" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#F9FAFB">Building</text>
+  <text x="576" y="98" font-family="Segoe UI, system-ui, monospace" font-size="10" fill="#9CA3AF">LOCATION</text>
+  <text x="576" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#F9FAFB">Brazil</text>
+  <text x="576" y="138" font-family="Segoe UI, system-ui, monospace" font-size="10" fill="#9CA3AF">FOCUS</text>
+  <text x="576" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#818CF8">Backend • Mobile • Cloud</text>
+  <text x="576" y="178" font-family="Segoe UI, system-ui, monospace" font-size="10" fill="#9CA3AF">@jhonzito66</text>
 </svg>

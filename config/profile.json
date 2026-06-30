@@ -1,0 +1,52 @@
+{
+  "username": "jhonzito66",
+  "name": "João Pedro",
+  "title": "Full Stack Engineer",
+  "status": "Building",
+  "location": "Brazil",
+  "focus": ["Backend", "Mobile", "Cloud"],
+  "stack": ["Java", "Spring", "Node", "React", "TypeScript", "Python", "Flutter"],
+  "currentProject": "APKMyFinance",
+  "currentProjectUrl": "https://github.com/jhonzito66/apkmyfinance",
+  "theme": {
+    "bg": "#0B0F19",
+    "surface": "#111827",
+    "border": "#1F2937",
+    "accent": "#6366F1",
+    "accentGlow": "#818CF8",
+    "text": "#F9FAFB",
+    "muted": "#9CA3AF",
+    "success": "#22C55E"
+  },
+  "projects": [
+    {
+      "id": "apkmyfinance",
+      "name": "APKMyFinance",
+      "tagline": "Financial Platform",
+      "tags": ["Flutter", "Dart", "Mobile"],
+      "url": "https://github.com/jhonzito66/apkmyfinance"
+    },
+    {
+      "id": "site-gabriela",
+      "name": "Site Gabriela",
+      "tagline": "Production Web App",
+      "tags": ["TypeScript", "React", "Vercel"],
+      "url": "https://github.com/jhonzito66/SiteGabriela",
+      "live": "https://site-gabriela.vercel.app"
+    },
+    {
+      "id": "backend",
+      "name": "Backend + Frontend",
+      "tagline": "Full Stack Java",
+      "tags": ["Java", "Spring", "REST"],
+      "url": "https://github.com/jhonzito66/backend"
+    },
+    {
+      "id": "engineering-os",
+      "name": "Engineering OS",
+      "tagline": "Dev Workflow Automation",
+      "tags": ["Shell", "DevOps", "CI/CD"],
+      "url": "https://github.com/jhonzito66/engineering-os"
+    }
+  ]
+}

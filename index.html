@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>profile-engine · preview</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #030712;
+      color: #F9FAFB;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    header {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      border-bottom: 1px solid #1F2937;
+      padding-bottom: 1.5rem;
+    }
+    h1 { font-size: 1.5rem; font-weight: 600; }
+    h1 span { color: #6366F1; }
+    p { color: #9CA3AF; margin-top: 0.5rem; font-size: 0.95rem; }
+    main { max-width: 900px; margin: 0 auto; display: grid; gap: 2rem; }
+    section {
+      background: #0B0F19;
+      border: 1px solid #1F2937;
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    section h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6366F1;
+      margin-bottom: 1rem;
+    }
+    img, svg { max-width: 100%; height: auto; display: block; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    code {
+      background: #111827;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    footer {
+      max-width: 900px;
+      margin: 2rem auto 0;
+      text-align: center;
+      color: #6B7280;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span>profile-engine</span> · preview</h1>
+    <p>Gerador de assets SVG para o perfil GitHub de <strong>@jhonzito66</strong>. Edite <code>config/profile.json</code> e rode <code>npm run generate</code>.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Banner</h2>
+      <img src="assets/banner.svg" alt="Profile banner"/>
+    </section>
+
+    <section>
+      <h2>Terminal</h2>
+      <img src="assets/terminal.svg" alt="Terminal animation"/>
+    </section>
+
+    <section>
+      <h2>Particles</h2>
+      <img src="assets/particles.svg" alt="Particle mesh"/>
+    </section>
+
+    <section>
+      <h2>Project Cards</h2>
+      <div class="cards">
+        <img src="assets/cards/apkmyfinance.svg" alt="APKMyFinance"/>
+        <img src="assets/cards/site-gabriela.svg" alt="Site Gabriela"/>
+        <img src="assets/cards/backend.svg" alt="Backend"/>
+        <img src="assets/cards/engineering-os.svg" alt="Engineering OS"/>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Hospede via GitHub Pages → jhonzito66.github.io/profile-engine
+  </footer>
+</body>
+</html>

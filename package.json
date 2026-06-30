@@ -1,0 +1,13 @@
+{
+  "name": "profile-engine",
+  "version": "1.0.0",
+  "description": "SVG banner generator and profile automation for GitHub",
+  "private": true,
+  "scripts": {
+    "generate": "node scripts/generate.js",
+    "preview": "npx --yes serve . -p 3456"
+  },
+  "keywords": ["github", "profile", "svg", "banner"],
+  "author": "João Pedro (@jhonzito66)",
+  "license": "MIT"
+}

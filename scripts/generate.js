@@ -11,7 +11,7 @@ const config = JSON.parse(
   fs.readFileSync(path.join(ROOT, "config", "profile.json"), "utf8")
 );
 
-const { name, title, status, location, focus, stack, currentProject, theme } =
+const { name, title, status, location, focus, stack, currentProject, languages, theme } =
   config;
 
 function escapeXml(str) {
@@ -133,6 +133,38 @@ function generateTerminal() {
 </svg>`;
 }
 
+function generateLanguagesChart() {
+  const barH = 22;
+  const gap = 10;
+  const startY = 56;
+  const maxBarW = 420;
+  const totalH = startY + languages.length * (barH + gap) + 24;
+
+  const bars = languages
+    .map((lang, i) => {
+      const y = startY + i * (barH + gap);
+      const w = Math.max(4, (lang.percent / 100) * maxBarW);
+      return `  <text x="24" y="${y + 15}" font-family="system-ui, sans-serif" font-size="12" fill="${theme.text}">${escapeXml(lang.name)}</text>
+  <rect x="120" y="${y}" width="${maxBarW}" height="${barH}" rx="4" fill="${theme.surface}"/>
+  <rect x="120" y="${y}" width="${w}" height="${barH}" rx="4" fill="url(#langGrad)"/>
+  <text x="${120 + maxBarW + 12}" y="${y + 15}" font-family="system-ui, sans-serif" font-size="11" fill="${theme.muted}">${lang.percent}%</text>`;
+    })
+    .join("\n");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 ${totalH}" width="580" height="${totalH}" role="img" aria-label="Top Languages">
+  <defs>
+    <linearGradient id="langGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="${theme.accent}"/>
+      <stop offset="100%" stop-color="${theme.accentGlow}"/>
+    </linearGradient>
+  </defs>
+  <rect width="580" height="${totalH}" rx="10" fill="${theme.bg}" stroke="${theme.border}" stroke-width="1"/>
+  <rect width="580" height="4" rx="10" fill="url(#langGrad)"/>
+  <text x="24" y="36" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="${theme.text}">Top Languages</text>
+${bars}
+</svg>`;
+}
+
 function generateProjectCard(project) {
   const gradId = `g-${project.id}`;
   const tags = project.tags
@@ -169,6 +201,7 @@ function writeFile(relativePath, content) {
 
 writeFile("assets/banner.svg", generateBanner());
 writeFile("assets/terminal.svg", generateTerminal());
+writeFile("assets/languages.svg", generateLanguagesChart());
 for (const project of config.projects) {
   writeFile(`assets/cards/${project.id}.svg`, generateProjectCard(project));
 }

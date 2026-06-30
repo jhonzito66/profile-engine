@@ -9,10 +9,11 @@
   "currentProject": "APKMyFinance",
   "currentProjectUrl": "https://github.com/jhonzito66/apkmyfinance",
   "languages": [
-    { "name": "Java", "percent": 72 },
-    { "name": "CSS", "percent": 10 },
+    { "name": "Java", "percent": 58 },
+    { "name": "Dart / Flutter", "percent": 16 },
+    { "name": "CSS", "percent": 9 },
     { "name": "TypeScript", "percent": 8 },
-    { "name": "HTML", "percent": 8 },
+    { "name": "HTML", "percent": 7 },
     { "name": "JavaScript", "percent": 1 },
     { "name": "Shell", "percent": 1 }
   ],

@@ -1,75 +1,87 @@
-# profile-engine
+<div align="center">
 
-Motor de geração de assets SVG para o perfil GitHub de [@jhonzito66](https://github.com/jhonzito66).
+<!--
+  GitHub Profile — jhonzito66
+  Estilo: neofetch terminal
+  Regenere a ASCII art: python3 scripts/gen_ascii.py
+-->
 
-Em vez de copiar templates genéricos, este projeto gera um **banner animado exclusivo**, terminal interativo, cards de projetos e automações — tudo leve, em SVG puro (sem GIF/vídeo).
-
-## Estrutura
+<table border="0" cellspacing="0" cellpadding="12">
+<tr>
+<td valign="top" align="center">
 
 ```
-profile-engine/
-├── assets/
-│   ├── banner.svg          ← banner principal (animado)
-│   ├── terminal.svg        ← terminal com typing effect
-│   ├── particles.svg       ← malha de partículas
-│   └── cards/              ← cards premium dos projetos
-├── config/
-│   └── profile.json        ← fonte da verdade (nome, stack, projetos)
-├── scripts/
-│   └── generate.js         ← gera todos os SVGs a partir do config
-├── index.html              ← preview local
-└── .github/workflows/
-    ├── generate.yml        ← regenera assets no push
-    └── deploy-pages.yml    ← publica no GitHub Pages
+ .=++*##+-....   ....................:::::
+-+*+*#*=:.. .......     .................:
+*****+-.                            ......
+***##*++===============+=+++++++++++++++++
+****##%%%#****+++=++**==++=++++++++++*****
+******###%#++++*+=*@@%=#@%%+====+++++++***
+*****#*-+*##*=*@@#%@%@@@%@@#==++++++*****#
+######:..:=#%#--*@@@@@@@#**%#++++*****####
+====+-.....:+*::*@@@@@@@@%+#@+++**#######%
+           . ..-#%%#@@@@@**+:............:
+:::::::.:.:::-.-*=#%@@@@#*@: .............
+==+****#%%@@@%:-@#-=+**+*@@:..........::::
+**###%%@@@@@@*++@@#-:=*%@@@:.........:::::
+##%%@@@@@@@@@##+%@@@@@@@@@@+ .........::::
+#%%%%%%%@@@@#***##@@@@@@@@@@+ ..:.::::::-:
+####%%@@@@%#*=#@@##@@@@@@@@@@- .........::
+##%%@@@@@@@@+:*%@@%%@@@@@@@@@@=.:.........
+@@@@@@@%###*:.:=====%@@@@*==*%#++++======-
 ```
 
-## Quick start
+</td>
+<td valign="top" align="left">
 
-```bash
-# Edite seus dados
-code config/profile.json
-
-# Gere os SVGs
-npm run generate
-
-# Preview local
-npm run preview
-# → http://localhost:3456
+```
+jhonzito66@github
+─────────────────────────────────────────
+OS: ............... macOS (MacBook Air)
+Host: ............. Forja Softwares LTDA
+Kernel: ........... Full-Stack / Co-founder
+IDE: .............. VSCode + Claude Code
+─────────────────────────────────────────
+Lang.Code: ........ Java · TypeScript · Python · Dart
+Lang.Stack: ....... Spring Boot · Next.js · Flutter
+                    Fastify · PostgreSQL
+Lang.Human: ....... Português (BR) · English
+─────────────────────────────────────────
+Building: ......... MaxSync
+                    → gestão de confinamento pecuário
+Building: ......... GUME
+                    → pedidos via WhatsApp p/ restaurantes
+─────────────────────────────────────────
+Email: ............ forjasoftwaredeveloper@gmail.com
+Instagram: ........ instagram.com/forja_software
+Location: ......... Goiânia, GO — Brasil
+─────────────────────────────────────────
 ```
 
-## Consumo no README do perfil
+</td>
+</tr>
+</table>
 
-Após publicar no GitHub Pages:
+---
 
-```markdown
-<img src="https://jhonzito66.github.io/profile-engine/assets/banner.svg" width="100%"/>
-<img src="https://jhonzito66.github.io/profile-engine/assets/terminal.svg" width="100%"/>
-```
+### GitHub Stats
 
-Ou via raw (branch `main`):
+<img src="https://github-readme-stats.vercel.app/api?username=jhonzito66&show_icons=true&theme=dark&hide_border=true&bg_color=0D0D0D&title_color=F97316&icon_color=F97316&text_color=ffffff" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jhonzito66&layout=compact&theme=dark&hide_border=true&bg_color=0D0D0D&title_color=F97316&text_color=ffffff&langs_count=6" height="165"/>
 
-```markdown
-<img src="https://raw.githubusercontent.com/jhonzito66/profile-engine/main/assets/banner.svg" width="100%"/>
-```
+<br/>
 
-## Design
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=jhonzito66&theme=dark&hide_border=true&background=0D0D0D&ring=F97316&fire=F97316&currStreakLabel=F97316"/>
 
-| Token | Valor | Uso |
-|-------|-------|-----|
-| `--bg` | `#0B0F19` | Fundo principal |
-| `--accent` | `#6366F1` | Indigo (Vercel/Linear vibe) |
-| `--text` | `#F9FAFB` | Texto principal |
-| `--muted` | `#9CA3AF` | Labels secundários |
+---
 
-Inspirado em interfaces de dev tools (Vercel, Linear, GitHub) com identidade própria.
+### Projects
 
-## Automação
+| Project | Description | Stack |
+|---------|-------------|-------|
+| [APKMyFinance](https://github.com/jhonzito66/apkmyfinance) | Financial Platform | Flutter · Dart |
+| [SiteGabriela](https://github.com/jhonzito66/SiteGabriela) | Production Web App | TypeScript · React |
+| [Backend](https://github.com/jhonzito66/backend) | Full Stack Java | Java · Spring · REST |
+| [Engineering OS](https://github.com/jhonzito66/engineering-os) | Dev Workflow Automation | Shell · DevOps |
 
-- **generate.yml** — roda `npm run generate` em cada push e commita os assets atualizados
-- **deploy-pages.yml** — publica `assets/` no GitHub Pages
-
-O repositório [`jhonzito66/jhonzito66`](https://github.com/jhonzito66/jhonzito66) consome estes assets automaticamente.
-
-## Licença
-
-MIT
+</div>

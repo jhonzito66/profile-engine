@@ -1,25 +1,25 @@
 """
-Gera ASCII art da foto de perfil usando PIL puro.
-Saída: ascii-art.txt (texto puro para embed no README)
+Gera ASCII art da foto de perfil (PIL puro).
+Saída: ascii-art.txt
 """
-from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance, ImageFilter
 import os
 
 IMG_PATH = os.path.join(os.path.dirname(__file__), "..", "167132754.png")
 OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "ascii-art.txt")
 
-# Charset do mais denso ao mais vazio
-CHARS = "@%#*+=-:. "
+# Charset denso → vazio (claro → escuro no terminal escuro = invertemos)
+CHARS  = " .,:;i1tfLCG08@"   # 15 graus de detalhe
+WIDTH  = 44
+RATIO  = 0.47  # correção de aspecto terminal
 
-WIDTH  = 42   # colunas (pra caber ao lado do bloco de texto)
-RATIO  = 0.45 # correção de aspecto do terminal (char ~2x mais alto que largo)
+def to_ascii(path, width):
+    img = Image.open(path).convert("L")  # grayscale
 
-def to_ascii(img_path: str, width: int) -> list[str]:
-    img = Image.open(img_path).convert("RGB")
-
-    # Contraste e saturação mais fortes pra ASCII ficar legível
-    img = ImageEnhance.Contrast(img).enhance(1.6)
-    img = ImageEnhance.Sharpness(img).enhance(2.0)
+    # Pipeline de melhoria
+    img = ImageEnhance.Contrast(img).enhance(2.0)
+    img = ImageEnhance.Sharpness(img).enhance(2.5)
+    img = img.filter(ImageFilter.EDGE_ENHANCE)
 
     w, h = img.size
     height = int(width * (h / w) * RATIO)
@@ -29,18 +29,19 @@ def to_ascii(img_path: str, width: int) -> list[str]:
     for y in range(height):
         row = ""
         for x in range(width):
-            r, g, b = img.getpixel((x, y))
-            brightness = (0.299 * r + 0.587 * g + 0.114 * b) / 255
+            pixel = img.getpixel((x, y))
+            # Inverte: pixel escuro (dog) → char denso
+            brightness = 1.0 - (pixel / 255.0)
             idx = int(brightness * (len(CHARS) - 1))
             row += CHARS[idx]
         lines.append(row)
     return lines
 
 lines = to_ascii(IMG_PATH, WIDTH)
-art = "\n".join(lines)
+art   = "\n".join(lines)
 
 with open(OUT_PATH, "w") as f:
     f.write(art)
 
 print(art)
-print(f"\n→ salvo em ascii-art.txt ({len(lines)} linhas × {WIDTH} cols)")
+print(f"\n→ {OUT_PATH}  ({len(lines)} linhas × {WIDTH} cols)")

@@ -4,10 +4,23 @@
   "title": "Full Stack Engineer",
   "status": "Building",
   "location": "Brazil",
+  "website": "https://forjasoftware.com.br",
+  "instagram": "https://www.instagram.com/forja_software",
   "focus": ["Backend", "Mobile", "Cloud"],
   "stack": ["Java", "Spring", "Node", "React", "TypeScript", "Python", "Flutter"],
-  "currentProject": "APKMyFinance",
-  "currentProjectUrl": "https://github.com/jhonzito66/apkmyfinance",
+  "currentProject": "GUME",
+  "currentProjectUrl": "https://github.com/jhonzito66/Gume",
+  "recentProjects": [
+    {
+      "name": "GUME",
+      "tagline": "pedidos via WhatsApp p/ restaurantes",
+      "url": "https://github.com/jhonzito66/Gume"
+    },
+    {
+      "name": "MaxSync",
+      "tagline": "gestão de confinamento pecuário"
+    }
+  ],
   "languages": [
     { "name": "TypeScript", "percent": 41.3 },
     { "name": "JavaScript", "percent": 36.6 },

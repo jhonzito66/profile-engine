@@ -11,6 +11,12 @@
 </tr>
 </table>
 
+<p>
+  <a href="https://forjasoftware.com.br">forjasoftware.com.br</a>
+  ·
+  <a href="https://www.instagram.com/forja_software">Instagram</a>
+</p>
+
 ---
 
 <img src="https://github-stats-extended.vercel.app/api?username=jhonzito66&show_icons=true&hide_border=true&bg_color=0C0C0C&title_color=00FF41&icon_color=00FF41&text_color=E6E6E6&border_radius=8" height="160"/>

@@ -19,10 +19,10 @@
   <a href="https://www.instagram.com/forja_software" title="Instagram @forja_software">
     <img src="./assets/instagram.svg" height="44" alt="Instagram"/>
   </a>
-  &nbsp;&nbsp;
-  <a href="https://gume.online/" title="GUME">
-    <img src="https://img.shields.io/badge/GUME-gume.online-00FF41?style=for-the-badge&labelColor=0C0C0C" alt="GUME — gume.online"/>
-  </a>
+</p>
+
+<p>
+  <a href="https://gume.online/"><strong>GUME</strong> → gume.online</a>
 </p>
 
 ---

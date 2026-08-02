@@ -9,13 +9,12 @@
   "currentProject": "APKMyFinance",
   "currentProjectUrl": "https://github.com/jhonzito66/apkmyfinance",
   "languages": [
-    { "name": "Java", "percent": 58 },
-    { "name": "Dart / Flutter", "percent": 16 },
-    { "name": "CSS", "percent": 9 },
-    { "name": "TypeScript", "percent": 8 },
-    { "name": "HTML", "percent": 7 },
-    { "name": "JavaScript", "percent": 1 },
-    { "name": "Shell", "percent": 1 }
+    { "name": "TypeScript", "percent": 41.3 },
+    { "name": "JavaScript", "percent": 36.6 },
+    { "name": "Java", "percent": 7.3 },
+    { "name": "Dart", "percent": 6.6 },
+    { "name": "CSS", "percent": 5.9 },
+    { "name": "HTML", "percent": 2.3 }
   ],
   "theme": {
     "bg": "#1A1A1A",

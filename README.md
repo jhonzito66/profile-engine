@@ -14,11 +14,11 @@
 ---
 
 <img src="https://github-stats-extended.vercel.app/api?username=jhonzito66&show_icons=true&hide_border=true&bg_color=0C0C0C&title_color=00FF41&icon_color=00FF41&text_color=E6E6E6&border_radius=8" height="160"/>
-<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=jhonzito66&layout=compact&hide_border=true&bg_color=0C0C0C&title_color=00FF41&text_color=E6E6E6&langs_count=6&border_radius=8" height="160"/>
+<img src="./assets/languages.svg" height="160"/>
 
 <br/>
 
-<img src="https://streak-stats.demolab.com/?user=jhonzito66&hide_border=true&background=0C0C0C&ring=00FF41&fire=FF5F56&currStreakLabel=00FF41&sideLabels=6A6A6A&dates=6A6A6A&border_radius=8"/>
+<img src="https://streak-stats.demolab.com/?user=jhonzito66&hide_border=true&background=0C0C0C&ring=00FF41&fire=FF5F56&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=E6E6E6&sideLabels=C9D1D9&dates=C9D1D9&border_radius=8"/>
 
 <br/>
 

@@ -6,7 +6,7 @@
   </style>
   <rect width="300" height="190" rx="8" fill="#0C0C0C" stroke="#333333" stroke-width="1"/>
   <text x="25" y="32" class="title">Most Used Languages</text>
-  <text x="25" y="48" class="sub">public + private · by code size</text>
+  <text x="25" y="48" class="sub">11 public + 24 private · by code size</text>
   <g transform="translate(25, 55)">
     <mask id="m"><rect x="0" y="0" width="250" height="8" rx="4" fill="#fff"/></mask>
     <rect x="0" y="0" width="250" height="8" rx="4" fill="#1F1F1F"/>

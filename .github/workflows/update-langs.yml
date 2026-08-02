@@ -23,14 +23,22 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Require GH_PAT (private repos)
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_PAT" ]; then
+            echo "::error::Secret GH_PAT ausente. Crie um classic PAT com scope 'repo' e adicione em Settings → Secrets → GH_PAT. Sem isso o card fica só com repos públicos."
+            exit 1
+          fi
+
       - name: Generate languages.svg (public + private)
         env:
-          # PAT com scope `repo` necessário para contar privados.
-          # Sem o secret, só entra o que o GITHUB_TOKEN enxerga (este repo).
-          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          GH_PAT: ${{ secrets.GH_PAT }}
           GITHUB_USERNAME: jhonzito66
           LANGS_EXCLUDE_REPOS: MaxSys
           LANGS_EXCLUDE_LANGS: Pascal
+          LANGS_MIN_PRIVATE: "5"
         run: python3 scripts/gen_top_langs.py
 
       - name: Commit languages.svg

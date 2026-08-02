@@ -3,8 +3,9 @@
 Gera assets/languages.svg a partir dos bytes reais de linguagem
 em repositórios OWNED (público + privado), via GitHub GraphQL.
 
-Requer: gh auth login (escopo repo) ou GH_TOKEN / GITHUB_TOKEN com acesso a privados.
-Exclui outliers configuráveis (ex.: MaxSys/Pascal) para o card ficar legível.
+Requer token com acesso a privados (gh auth / GH_TOKEN / GH_PAT com scope repo).
+Por padrão falha se não enxergar repositórios privados — evita sobrescrever
+o card com dados só-públicos (ex.: Actions com GITHUB_TOKEN).
 """
 from __future__ import annotations
 
@@ -20,6 +21,8 @@ OUT = ROOT / "assets" / "languages.svg"
 
 USERNAME = os.environ.get("GITHUB_USERNAME", "jhonzito66")
 TOP_N = int(os.environ.get("LANGS_TOP_N", "6"))
+# Mínimo de privados visíveis; 0 desativa a checagem.
+MIN_PRIVATE = int(os.environ.get("LANGS_MIN_PRIVATE", "5"))
 EXCLUDE_REPOS = {
     r.strip()
     for r in os.environ.get("LANGS_EXCLUDE_REPOS", "MaxSys").split(",")
@@ -31,7 +34,6 @@ EXCLUDE_LANGS = {
     if r.strip()
 }
 
-# Tema terminal padrão
 BG = "#0C0C0C"
 BORDER = "#333333"
 TITLE = "#00FF41"
@@ -57,7 +59,12 @@ query($login: String!) {
 
 
 def gh_graphql(login: str) -> dict:
-    token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or os.environ.get("PAT")
+    token = (
+        os.environ.get("GH_PAT")
+        or os.environ.get("GH_TOKEN")
+        or os.environ.get("GITHUB_TOKEN")
+        or os.environ.get("PAT")
+    )
     if token:
         import urllib.request
 
@@ -75,15 +82,7 @@ def gh_graphql(login: str) -> dict:
             payload = json.load(resp)
     else:
         proc = subprocess.run(
-            [
-                "gh",
-                "api",
-                "graphql",
-                "-f",
-                f"query={QUERY}",
-                "-F",
-                f"login={login}",
-            ],
+            ["gh", "api", "graphql", "-f", f"query={QUERY}", "-F", f"login={login}"],
             capture_output=True,
             text=True,
             check=False,
@@ -101,16 +100,23 @@ def gh_graphql(login: str) -> dict:
 def aggregate(payload: dict):
     totals: dict[str, int] = defaultdict(int)
     colors: dict[str, str] = {}
-    used_repos = []
-    skipped = []
+    used_repos: list[str] = []
+    skipped: list[str] = []
+    private_n = 0
+    public_n = 0
 
     nodes = payload["data"]["user"]["repositories"]["nodes"]
     for node in nodes:
         name = node["name"]
+        is_private = bool(node.get("isPrivate"))
         if name in EXCLUDE_REPOS:
             skipped.append(name)
             continue
-        used_repos.append(f"{name}{' (private)' if node.get('isPrivate') else ''}")
+        if is_private:
+            private_n += 1
+        else:
+            public_n += 1
+        used_repos.append(f"{name}{' (private)' if is_private else ''}")
         for edge in node["languages"]["edges"]:
             lang = edge["node"]["name"]
             if lang in EXCLUDE_LANGS:
@@ -129,13 +135,12 @@ def aggregate(payload: dict):
         }
         for lang, size in ranked
     ]
-    # renormalize so percents sum ~100 after rounding
     if rows:
         s = sum(r["percent"] for r in rows)
         if s and abs(s - 100) >= 0.1:
             rows[0]["percent"] = round(rows[0]["percent"] + (100 - s), 1)
 
-    return rows, used_repos, skipped
+    return rows, used_repos, skipped, private_n, public_n
 
 
 def esc(s: str) -> str:
@@ -147,21 +152,16 @@ def esc(s: str) -> str:
     )
 
 
-def render(rows: list[dict]) -> str:
-    """Card compacto (~300x190) no estilo top-langs, tema terminal."""
+def render(rows: list[dict], private_n: int, public_n: int) -> str:
     W, H = 300, 190
-    bar_y = 55
-    bar_h = 8
-    bar_w = 250
-    label_start = 78
-    col_gap = 130
-    row_h = 22
+    bar_y, bar_h, bar_w = 55, 8, 250
+    label_start, col_gap, row_h = 78, 130, 22
+    subtitle = f"{public_n} public + {private_n} private · by code size"
 
-    # progress segments
-    x = 0
+    x = 0.0
     segs = []
     for r in rows:
-        w = max(2, bar_w * (r["percent"] / 100))
+        w = max(2.0, bar_w * (r["percent"] / 100))
         segs.append(
             f'<rect mask="url(#m)" x="{x:.2f}" y="0" width="{w:.2f}" height="{bar_h}" fill="{r["color"]}"/>'
         )
@@ -169,8 +169,7 @@ def render(rows: list[dict]) -> str:
 
     labels = []
     for i, r in enumerate(rows):
-        col = i % 2
-        row = i // 2
+        col, row = i % 2, i // 2
         lx = 25 + col * col_gap
         ly = label_start + row * row_h
         labels.append(
@@ -188,7 +187,7 @@ def render(rows: list[dict]) -> str:
   </style>
   <rect width="{W}" height="{H}" rx="8" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
   <text x="25" y="32" class="title">Most Used Languages</text>
-  <text x="25" y="48" class="sub">public + private · by code size</text>
+  <text x="25" y="48" class="sub">{esc(subtitle)}</text>
   <g transform="translate(25, {bar_y})">
     <mask id="m"><rect x="0" y="0" width="{bar_w}" height="{bar_h}" rx="4" fill="#fff"/></mask>
     <rect x="0" y="0" width="{bar_w}" height="{bar_h}" rx="4" fill="{TRACK}"/>
@@ -202,15 +201,21 @@ def render(rows: list[dict]) -> str:
 def main():
     print(f"Fetching languages for {USERNAME}…")
     payload = gh_graphql(USERNAME)
-    rows, used, skipped = aggregate(payload)
+    rows, used, skipped, private_n, public_n = aggregate(payload)
+
+    if private_n < MIN_PRIVATE:
+        raise SystemExit(
+            f"Token só enxergou {private_n} repo(s) privado(s) (mínimo {MIN_PRIVATE}). "
+            "Use um PAT com scope `repo` (secret GH_PAT). Abortando para não publicar card só-público."
+        )
     if not rows:
         raise SystemExit("No language data returned")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(render(rows), encoding="utf-8")
+    OUT.write_text(render(rows, private_n, public_n), encoding="utf-8")
 
     print(f"✓ {OUT.relative_to(ROOT)}")
-    print(f"  repos: {len(used)}  skipped: {skipped or '—'}")
+    print(f"  counted: {public_n} public + {private_n} private  skipped: {skipped or '—'}")
     for r in rows:
         print(f"  {r['name']:15} {r['percent']:5.1f}%  ({r['bytes']:,} bytes)")
 

@@ -13,11 +13,19 @@
 
 ---
 
-<img src="https://github-readme-stats.vercel.app/api?username=jhonzito66&show_icons=true&hide_border=true&bg_color=1E1E2E&title_color=BD93F9&icon_color=50FA7B&text_color=F8F8F2&border_radius=8" height="160"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jhonzito66&layout=compact&hide_border=true&bg_color=1E1E2E&title_color=BD93F9&text_color=F8F8F2&langs_count=6&border_radius=8" height="160"/>
+<img src="https://github-stats-extended.vercel.app/api?username=jhonzito66&show_icons=true&hide_border=true&bg_color=0C0C0C&title_color=00FF41&icon_color=00FF41&text_color=E6E6E6&border_radius=8" height="160"/>
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=jhonzito66&layout=compact&hide_border=true&bg_color=0C0C0C&title_color=00FF41&text_color=E6E6E6&langs_count=6&border_radius=8" height="160"/>
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=jhonzito66&hide_border=true&background=1E1E2E&ring=BD93F9&fire=FF5555&currStreakLabel=BD93F9&sideLabels=6272A4&dates=6272A4&border_radius=8"/>
+<img src="https://streak-stats.demolab.com/?user=jhonzito66&hide_border=true&background=0C0C0C&ring=00FF41&fire=FF5F56&currStreakLabel=00FF41&sideLabels=6A6A6A&dates=6A6A6A&border_radius=8"/>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jhonzito66/jhonzito66/output/github-contribution-grid-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jhonzito66/jhonzito66/output/github-contribution-grid-snake.svg"/>
+  <img alt="github contribution snake" src="https://raw.githubusercontent.com/jhonzito66/jhonzito66/output/github-contribution-grid-snake.svg"/>
+</picture>
 
 </div>

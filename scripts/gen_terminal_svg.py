@@ -1,6 +1,6 @@
 """
-Gera assets/terminal.svg — card neofetch animado estilo terminal dev
-Cores: Dracula (purple #BD93F9 + green #50FA7B)
+Gera assets/terminal.svg — card neofetch animado estilo terminal
+Cores: ANSI clássicas (verde/ciano/âmbar em fundo preto)
 """
 import os
 
@@ -13,17 +13,19 @@ PX    = 16
 HEADER_H = 36
 PY_TOP   = 14
 
-BG      = "#1E1E2E"
-TITLE_BG = "#282A36"
-BORDER  = "#44475A"
-PURPLE  = "#BD93F9"
-GREEN   = "#50FA7B"
-CYAN    = "#8BE9FD"
-ORANGE  = "#FFB86C"
-YELLOW  = "#F1FA8C"
-WHITE   = "#F8F8F2"
-GRAY    = "#6272A4"
-RED     = "#FF5555"
+# Paleta terminal padrão (ANSI / CRT)
+BG       = "#0C0C0C"
+TITLE_BG = "#1A1A1A"
+BORDER   = "#333333"
+GREEN    = "#00FF41"
+CYAN     = "#00D7FF"
+ORANGE   = "#FFAF00"
+YELLOW   = "#FFD700"
+WHITE    = "#E6E6E6"
+GRAY     = "#6A6A6A"
+RED      = "#FF5F56"
+TL_YELLOW = "#FFBD2E"
+TL_GREEN  = "#27C93F"
 
 SEP = "─" * 44
 
@@ -36,24 +38,24 @@ LINES = [
     None,
     [seg("jhonzito66", CYAN), seg("@", GRAY), seg("github", GREEN)],
     [seg(SEP, GRAY)],
-    [seg("OS:      ", PURPLE), seg("macOS Sonoma · MacBook Air")],
-    [seg("Host:    ", PURPLE), seg("Forja Softwares LTDA")],
-    [seg("Role:    ", PURPLE), seg("Full-Stack Engineer · Co-founder")],
-    [seg("IDE:     ", PURPLE), seg("VSCode · Claude Code")],
+    [seg("OS:      ", GREEN), seg("macOS Sonoma · MacBook Air")],
+    [seg("Host:    ", GREEN), seg("Forja Softwares LTDA")],
+    [seg("Role:    ", GREEN), seg("Full-Stack Engineer · Co-founder")],
+    [seg("IDE:     ", GREEN), seg("VSCode · Claude Code")],
     [seg(SEP, GRAY)],
-    [seg("Code:    ", PURPLE), seg("Java · TypeScript · Python · Dart", GREEN)],
-    [seg("Stack:   ", PURPLE), seg("Spring Boot · Next.js · Flutter", GREEN)],
-    [seg("         ", WHITE),  seg("Fastify · PostgreSQL", GREEN)],
-    [seg("Human:   ", PURPLE), seg("Português (BR) · English")],
+    [seg("Code:    ", GREEN), seg("Java · TypeScript · Python · Dart", CYAN)],
+    [seg("Stack:   ", GREEN), seg("Spring Boot · Next.js · Flutter", CYAN)],
+    [seg("         ", WHITE),  seg("Fastify · PostgreSQL", CYAN)],
+    [seg("Human:   ", GREEN), seg("Português (BR) · English")],
     [seg(SEP, GRAY)],
     [seg("● ", ORANGE), seg("MaxSync", ORANGE)],
     [seg("  → ", GRAY), seg("gestão de confinamento pecuário")],
     [seg("● ", ORANGE), seg("GUME", ORANGE)],
     [seg("  → ", GRAY), seg("pedidos via WhatsApp p/ restaurantes")],
     [seg(SEP, GRAY)],
-    [seg("Email:   ", PURPLE), seg("forjasoftwaredeveloper@gmail.com")],
-    [seg("IG:      ", PURPLE), seg("instagram.com/forja_software")],
-    [seg("Local:   ", PURPLE), seg("Goiânia, GO — Brasil")],
+    [seg("Email:   ", GREEN), seg("forjasoftwaredeveloper@gmail.com")],
+    [seg("IG:      ", GREEN), seg("instagram.com/forja_software")],
+    [seg("Local:   ", GREEN), seg("Goiânia, GO — Brasil")],
     [seg(SEP, GRAY)],
     "CURSOR",
 ]
@@ -73,7 +75,6 @@ def render_lines():
             continue
 
         if line == "CURSOR":
-            # prompt text
             elems.append(
                 f'<text x="{PX}" y="{y}" '
                 f'font-family="\'Courier New\', Courier, monospace" font-size="{FONT}" '
@@ -81,8 +82,7 @@ def render_lines():
                 f'style="opacity:0;animation:fadeIn .1s ease {delay}s forwards">'
                 f'$ </text>'
             )
-            # blinking cursor block
-            cx = PX + 14  # approx width of "$ "
+            cx = PX + 14
             cy = y - FONT + 2
             elems.append(
                 f'<rect x="{cx}" y="{cy}" width="8" height="{FONT}" fill="{GREEN}" '
@@ -125,8 +125,8 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewB
 
   <!-- traffic lights -->
   <circle cx="18" cy="18" r="6" fill="{RED}"/>
-  <circle cx="36" cy="18" r="6" fill="{YELLOW}"/>
-  <circle cx="54" cy="18" r="6" fill="{GREEN}"/>
+  <circle cx="36" cy="18" r="6" fill="{TL_YELLOW}"/>
+  <circle cx="54" cy="18" r="6" fill="{TL_GREEN}"/>
 
   <!-- title -->
   <text x="{W // 2}" y="22" text-anchor="middle"

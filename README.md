@@ -12,14 +12,24 @@
 </table>
 
 <p>
-  <a href="https://forjasoftware.com.br">forjasoftware.com.br</a>
-  ·
-  <a href="https://www.instagram.com/forja_software">Instagram</a>
+  <a href="https://forjasoftware.com.br" title="Forja Software">
+    <img src="./assets/logosolo.svg" height="44" alt="Forja Software"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://www.instagram.com/forja_software" title="Instagram @forja_software">
+    <img src="./assets/instagram.svg" height="44" alt="Instagram"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://gume.online/" title="GUME">
+    <img src="https://img.shields.io/badge/GUME-gume.online-00FF41?style=for-the-badge&labelColor=0C0C0C" alt="GUME — gume.online"/>
+  </a>
 </p>
 
 ---
 
-<img src="https://github-stats-extended.vercel.app/api?username=jhonzito66&show_icons=true&hide_border=true&bg_color=0C0C0C&title_color=00FF41&icon_color=00FF41&text_color=E6E6E6&border_radius=8" height="160"/>
+<!-- Commits do card de cima = só públicos / métrica diferente do streak.
+     hide=commits evita o conflito com Total Contributions (~1k). -->
+<img src="https://github-stats-extended.vercel.app/api?username=jhonzito66&show_icons=true&hide_border=true&hide=commits&bg_color=0C0C0C&title_color=00FF41&icon_color=00FF41&text_color=E6E6E6&border_radius=8" height="160"/>
 <img src="./assets/languages.svg" height="160"/>
 
 <br/>

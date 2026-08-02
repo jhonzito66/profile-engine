@@ -50,7 +50,7 @@ LINES = [
     [seg(SEP, GRAY)],
     [seg("Recent:  ", GREEN), seg("últimos mexidos", GRAY)],
     [seg("● ", ORANGE), seg("GUME", ORANGE), seg("  ★", YELLOW)],
-    [seg("  → ", GRAY), seg("pedidos via WhatsApp p/ restaurantes")],
+    [seg("  → ", GRAY), seg("gume.online — pedidos WhatsApp")],
     [seg("● ", ORANGE), seg("MaxSync", ORANGE)],
     [seg("  → ", GRAY), seg("gestão de confinamento pecuário")],
     [seg(SEP, GRAY)],

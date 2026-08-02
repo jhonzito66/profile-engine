@@ -27,10 +27,6 @@
 
 ---
 
-<img src="./assets/languages.svg" height="160"/>
-
-<br/>
-
 <img src="https://streak-stats.demolab.com/?user=jhonzito66&hide_border=true&background=0C0C0C&ring=00FF41&fire=FF5F56&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=E6E6E6&sideLabels=C9D1D9&dates=C9D1D9&border_radius=8"/>
 
 <br/>

@@ -27,9 +27,6 @@
 
 ---
 
-<!-- Commits do card de cima = só públicos / métrica diferente do streak.
-     hide=commits evita o conflito com Total Contributions (~1k). -->
-<img src="https://github-stats-extended.vercel.app/api?username=jhonzito66&show_icons=true&hide_border=true&hide=commits&bg_color=0C0C0C&title_color=00FF41&icon_color=00FF41&text_color=E6E6E6&border_radius=8" height="160"/>
 <img src="./assets/languages.svg" height="160"/>
 
 <br/>

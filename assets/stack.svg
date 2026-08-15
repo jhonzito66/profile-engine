@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 192" width="700" height="192" role="img" aria-label="Tech Stack">
+  <defs>
+    <style>
+      @keyframes popIn {
+        from { opacity: 0; transform: translateY(4px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+    <linearGradient id="stackGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="192" rx="10" fill="#0C0C0C" stroke="#333333" stroke-width="1"/>
+  <rect width="700" height="4" rx="10" fill="url(#stackGrad)"/>
+  <rect x="102" y="18" width="92" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.00s forwards"/>
+  <text x="148" y="36" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.00s forwards">TypeScript</text>
+  <rect x="202" y="18" width="68" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.07s forwards"/>
+  <text x="236" y="36" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.07s forwards">Dart</text>
+  <rect x="278" y="18" width="68" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.14s forwards"/>
+  <text x="312" y="36" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.14s forwards">Python</text>
+  <rect x="354" y="18" width="68" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.21s forwards"/>
+  <text x="388" y="36" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.21s forwards">Java</text>
+  <rect x="430" y="18" width="92" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.28s forwards"/>
+  <text x="476" y="36" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.28s forwards">JavaScript</text>
+  <rect x="530" y="18" width="68" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.35s forwards"/>
+  <text x="564" y="36" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.35s forwards">SQL</text>
+  <rect x="103" y="70" width="71" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.18s forwards"/>
+  <text x="139" y="88" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.18s forwards">Flutter</text>
+  <rect x="182" y="70" width="71" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.25s forwards"/>
+  <text x="218" y="88" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.25s forwards">Node.js</text>
+  <rect x="261" y="70" width="92" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.32s forwards"/>
+  <text x="307" y="88" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.32s forwards">PostgreSQL</text>
+  <rect x="361" y="70" width="68" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.39s forwards"/>
+  <text x="395" y="88" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.39s forwards">SQLite</text>
+  <rect x="437" y="70" width="68" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.46s forwards"/>
+  <text x="471" y="88" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.46s forwards">Docker</text>
+  <rect x="513" y="70" width="85" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.53s forwards"/>
+  <text x="556" y="88" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.53s forwards">REST APIs</text>
+  <rect x="232" y="122" width="85" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.36s forwards"/>
+  <text x="275" y="140" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.36s forwards">PowerSync</text>
+  <rect x="325" y="122" width="68" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.43s forwards"/>
+  <text x="359" y="140" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.43s forwards">Git</text>
+  <rect x="401" y="122" width="68" height="28" rx="5" fill="#1A1A1A" stroke="#333333" stroke-width="1" style="opacity:0;animation:popIn .22s ease 0.50s forwards"/>
+  <text x="435" y="140" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#E6E6E6" style="opacity:0;animation:popIn .22s ease 0.50s forwards">Linux</text>
+</svg>

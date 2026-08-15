@@ -192,6 +192,101 @@ function generateProjectCard(project) {
 </svg>`;
 }
 
+function generateExperienceCard() {
+  const W = 700;
+  const items = [
+    "Built and maintained an operational management system with 100+ screens",
+    "Developed offline-first mobile apps with real-time data synchronization",
+    "Integrated mobile software with external automation hardware",
+    "Built reporting systems generating charts, indicators, and daily summaries",
+    "Worked on business process automation and document generation",
+    "Contributed across mobile, API, database, and infrastructure layers",
+  ];
+
+  const headerH = 88;
+  const itemH = 36;
+  const H = headerH + items.length * itemH + 20;
+
+  const bullets = items.map((item, i) => {
+    const y = headerH + i * itemH;
+    const delay = (0.15 + i * 0.1).toFixed(2);
+    return `  <rect x="22" y="${y + 3}" width="5" height="5" rx="1" fill="${theme.accent}" style="opacity:0;animation:slideIn .25s ease ${delay}s forwards"/>
+  <text x="38" y="${y + 13}" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="${theme.text}" style="opacity:0;animation:slideIn .25s ease ${delay}s forwards">${escapeXml(item)}</text>`;
+  }).join("\n");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Experience at Forja Softwares">
+  <defs>
+    <style>
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-6px); }
+        to   { opacity: 1; transform: translateX(0); }
+      }
+    </style>
+    <linearGradient id="expGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="${theme.accent}"/>
+      <stop offset="100%" stop-color="${theme.accentGlow}"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" rx="10" fill="${theme.bg}" stroke="${theme.border}" stroke-width="1"/>
+  <rect width="${W}" height="4" rx="10" fill="url(#expGrad)"/>
+  <text x="22" y="36" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="${theme.text}" style="opacity:0;animation:slideIn .25s ease 0.0s forwards">At Forja Softwares</text>
+  <text x="22" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="${theme.muted}" style="opacity:0;animation:slideIn .25s ease 0.07s forwards">Software engineering for real-world operations · ~2 years</text>
+  <line x1="22" y1="72" x2="${W - 22}" y2="72" stroke="${theme.border}" stroke-width="1"/>
+${bullets}
+</svg>`;
+}
+
+function generateStackCard() {
+  const W = 700;
+  const chipH = 28;
+  const chipGap = 8;
+  const rowH = 52;
+  const topPad = 18;
+  const bottomPad = 18;
+
+  const groups = [
+    ["TypeScript", "Dart", "Python", "Java", "JavaScript", "SQL"],
+    ["Flutter", "Node.js", "PostgreSQL", "SQLite", "Docker", "REST APIs"],
+    ["PowerSync", "Git", "Linux"],
+  ];
+
+  const H = topPad + groups.length * rowH + bottomPad;
+
+  const allRows = groups.map((items, gi) => {
+    const chipWidths = items.map(item => Math.max(68, item.length * 7 + 22));
+    const totalW = chipWidths.reduce((a, b) => a + b, 0) + (items.length - 1) * chipGap;
+    let x = Math.round((W - totalW) / 2);
+    const y = topPad + gi * rowH;
+
+    return items.map((item, ci) => {
+      const cw = chipWidths[ci];
+      const delay = (gi * 0.18 + ci * 0.07).toFixed(2);
+      const chip = `  <rect x="${x}" y="${y}" width="${cw}" height="${chipH}" rx="5" fill="${theme.surface}" stroke="${theme.border}" stroke-width="1" style="opacity:0;animation:popIn .22s ease ${delay}s forwards"/>
+  <text x="${x + Math.round(cw / 2)}" y="${y + 18}" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="${theme.text}" style="opacity:0;animation:popIn .22s ease ${delay}s forwards">${escapeXml(item)}</text>`;
+      x += cw + chipGap;
+      return chip;
+    }).join("\n");
+  }).join("\n");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Tech Stack">
+  <defs>
+    <style>
+      @keyframes popIn {
+        from { opacity: 0; transform: translateY(4px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+    <linearGradient id="stackGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="${theme.accent}"/>
+      <stop offset="100%" stop-color="${theme.accentGlow}"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" rx="10" fill="${theme.bg}" stroke="${theme.border}" stroke-width="1"/>
+  <rect width="${W}" height="4" rx="10" fill="url(#stackGrad)"/>
+${allRows}
+</svg>`;
+}
+
 function writeFile(relativePath, content) {
   const fullPath = path.join(ROOT, relativePath);
   fs.mkdirSync(path.dirname(fullPath), { recursive: true });
@@ -202,6 +297,8 @@ function writeFile(relativePath, content) {
 writeFile("assets/banner.svg", generateBanner());
 // terminal.svg is owned by scripts/gen_terminal_svg.py (neofetch style)
 writeFile("assets/languages.svg", generateLanguagesChart());
+writeFile("assets/experience.svg", generateExperienceCard());
+writeFile("assets/stack.svg", generateStackCard());
 for (const project of config.projects) {
   writeFile(`assets/cards/${project.id}.svg`, generateProjectCard(project));
 }

@@ -22,6 +22,6 @@
 
 <br/>
 
-[Forja Softwares](https://forjasoftware.com.br) &nbsp;·&nbsp; [Instagram](https://www.instagram.com/forja_software) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/YOUR_HANDLE_HERE)
+[Forja Softwares](https://forjasoftware.com.br) &nbsp;·&nbsp; [Instagram](https://www.instagram.com/forja_software) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/jo%C3%A3opedro-sb/)
 
 </div>

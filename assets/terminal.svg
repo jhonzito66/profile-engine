@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="510" height="490" viewBox="0 0 510 490">
+<svg xmlns="http://www.w3.org/2000/svg" width="510" height="469" viewBox="0 0 510 469">
   <defs>
     <style>
       @keyframes fadeIn {
@@ -13,7 +13,7 @@
   </defs>
 
   <!-- window bg -->
-  <rect width="510" height="490" rx="10" fill="#0C0C0C" stroke="#333333" stroke-width="1"/>
+  <rect width="510" height="469" rx="10" fill="#0C0C0C" stroke="#333333" stroke-width="1"/>
 
   <!-- title bar -->
   <rect width="510" height="36" rx="10" fill="#1A1A1A"/>
@@ -43,12 +43,11 @@
   <text x="16" y="273" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.55s forwards"><tspan fill="#E6E6E6">           </tspan><tspan fill="#00D7FF">Docker · SQLite · REST APIs</tspan></text>
   <text x="16" y="294" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.605s forwards"><tspan fill="#6A6A6A">──────────────────────────────────────────────</tspan></text>
   <text x="16" y="315" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.66s forwards"><tspan fill="#00FF41">Focus:     </tspan><tspan fill="#E6E6E6">Mobile · Backend · Systems · Products</tspan></text>
-  <text x="16" y="336" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.715s forwards"><tspan fill="#00FF41">Spoken:    </tspan><tspan fill="#E6E6E6">Português (BR) · English</tspan></text>
+  <text x="16" y="336" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.715s forwards"><tspan fill="#00FF41">Spoken:    </tspan><tspan fill="#E6E6E6">Portuguese (BR) · English</tspan></text>
   <text x="16" y="357" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.77s forwards"><tspan fill="#6A6A6A">──────────────────────────────────────────────</tspan></text>
   <text x="16" y="378" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.825s forwards"><tspan fill="#00FF41">Web:       </tspan><tspan fill="#00D7FF">forjasoftware.com.br</tspan></text>
   <text x="16" y="399" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.88s forwards"><tspan fill="#00FF41">IG:        </tspan><tspan fill="#00D7FF">instagram.com/forja_software</tspan></text>
-  <text x="16" y="420" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.935s forwards"><tspan fill="#00FF41">Seeking:   </tspan><tspan fill="#E6E6E6">International opportunities</tspan></text>
-  <text x="16" y="441" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.99s forwards"><tspan fill="#6A6A6A">──────────────────────────────────────────────</tspan></text>
-  <text x="16" y="462" font-family="'Courier New', Courier, monospace" font-size="13" fill="#00FF41" style="opacity:0;animation:fadeIn .1s ease 1.045s forwards">$ </text>
-  <rect x="30" y="451" width="8" height="13" fill="#00FF41" style="opacity:0;animation:fadeIn .1s ease 1.045s forwards, blink 1s step-end 1.2449999999999999s infinite"/>
+  <text x="16" y="420" font-family="'Courier New', Courier, monospace" font-size="13" style="opacity:0;animation:fadeIn .1s ease 0.935s forwards"><tspan fill="#6A6A6A">──────────────────────────────────────────────</tspan></text>
+  <text x="16" y="441" font-family="'Courier New', Courier, monospace" font-size="13" fill="#00FF41" style="opacity:0;animation:fadeIn .1s ease 0.99s forwards">$ </text>
+  <rect x="30" y="430" width="8" height="13" fill="#00FF41" style="opacity:0;animation:fadeIn .1s ease 0.99s forwards, blink 1s step-end 1.19s infinite"/>
 </svg>

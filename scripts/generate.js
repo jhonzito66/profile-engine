@@ -196,7 +196,7 @@ function generateExperienceCard() {
   const W = 700;
   const items = [
     "Built and maintained an operational management system with 100+ screens",
-    "Developed offline-first mobile apps with real-time data synchronization",
+    "Developed offline-first mobile apps with data synchronization",
     "Integrated mobile software with external automation hardware",
     "Built reporting systems generating charts, indicators, and daily summaries",
     "Worked on business process automation and document generation",
@@ -229,7 +229,7 @@ function generateExperienceCard() {
   </defs>
   <rect width="${W}" height="${H}" rx="10" fill="${theme.bg}" stroke="${theme.border}" stroke-width="1"/>
   <rect width="${W}" height="4" rx="10" fill="url(#expGrad)"/>
-  <text x="22" y="36" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="${theme.text}" style="opacity:0;animation:slideIn .25s ease 0.0s forwards">At Forja Softwares</text>
+  <text x="22" y="36" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="${theme.text}" style="opacity:0;animation:slideIn .25s ease 0.0s forwards">Experience — Forja Softwares</text>
   <text x="22" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="${theme.muted}" style="opacity:0;animation:slideIn .25s ease 0.07s forwards">Software engineering for real-world operations · ~2 years</text>
   <line x1="22" y1="72" x2="${W - 22}" y2="72" stroke="${theme.border}" stroke-width="1"/>
 ${bullets}

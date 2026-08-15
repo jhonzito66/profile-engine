@@ -47,11 +47,10 @@ LINES = [
     [seg("           ", WHITE), seg("Docker · SQLite · REST APIs", CYAN)],
     [seg(SEP, GRAY)],
     [seg("Focus:     ", GREEN), seg("Mobile · Backend · Systems · Products")],
-    [seg("Spoken:    ", GREEN), seg("Português (BR) · English")],
+    [seg("Spoken:    ", GREEN), seg("Portuguese (BR) · English")],
     [seg(SEP, GRAY)],
     [seg("Web:       ", GREEN), seg("forjasoftware.com.br", CYAN)],
     [seg("IG:        ", GREEN), seg("instagram.com/forja_software", CYAN)],
-    [seg("Seeking:   ", GREEN), seg("International opportunities")],
     [seg(SEP, GRAY)],
     "CURSOR",
 ]

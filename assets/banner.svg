@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="800" height="220" role="img" aria-label="João Pedro — Full Stack Engineer">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="800" height="220" role="img" aria-label="João Pedro Barbosa — Full-Stack Software Developer">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="0%" stop-color="#0C0C0C"/>
       <stop offset="100%" stop-color="#252525"/>
     </linearGradient>
     <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -35,29 +35,29 @@
   <rect x="0" y="0" width="800" height="3" fill="url(#accentGrad)"/>
   <rect x="0" y="217" width="800" height="3" fill="url(#accentGrad)" opacity="0.5"/>
 
-  <text x="48" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="38" font-weight="700" fill="#FFFFFF" filter="url(#nameGlow)">João Pedro</text>
+  <text x="48" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="38" font-weight="700" fill="#E6E6E6" filter="url(#nameGlow)">João Pedro Barbosa</text>
 
-  <text x="48" y="118" font-family="Segoe UI, system-ui, monospace" font-size="15" fill="#A3A3A3">Full Stack Engineer</text>
-  <rect x="236.5" y="103" width="10" height="18" fill="#F97316">
+  <text x="48" y="118" font-family="Segoe UI, system-ui, monospace" font-size="15" fill="#6A6A6A">Full-Stack Software Developer</text>
+  <rect x="331.5" y="103" width="10" height="18" fill="#F97316">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
 
   <circle cx="58" cy="144" r="5" fill="#F97316">
     <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
   </circle>
-  <text x="72" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#A3A3A3">Online</text>
+  <text x="72" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#6A6A6A">Online</text>
 
-  <rect x="548" y="28" width="228" height="164" rx="8" fill="#2D2D2D" stroke="#404040" stroke-width="1"/>
+  <rect x="548" y="28" width="228" height="164" rx="8" fill="#1A1A1A" stroke="#333333" stroke-width="1"/>
   <rect x="548" y="28" width="228" height="4" rx="8" fill="url(#accentGrad)"/>
 
   <text x="564" y="56" font-family="Segoe UI, system-ui, monospace" font-size="9" letter-spacing="1" fill="#F97316">STATUS</text>
-  <text x="564" y="74" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Building</text>
+  <text x="564" y="74" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#E6E6E6">Building</text>
 
   <text x="564" y="98" font-family="Segoe UI, system-ui, monospace" font-size="9" letter-spacing="1" fill="#F97316">LOCATION</text>
-  <text x="564" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Brazil</text>
+  <text x="564" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#E6E6E6">Goiânia, Brazil</text>
 
   <text x="564" y="140" font-family="Segoe UI, system-ui, monospace" font-size="9" letter-spacing="1" fill="#F97316">FOCUS</text>
-  <text x="564" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#FB923C">Backend · Mobile · Cloud</text>
+  <text x="564" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#FB923C">Mobile · Backend · Systems</text>
 
-  <text x="564" y="182" font-family="Segoe UI, system-ui, monospace" font-size="11" fill="#A3A3A3">@jhonzito66</text>
+  <text x="564" y="182" font-family="Segoe UI, system-ui, monospace" font-size="11" fill="#6A6A6A">@jhonzito66</text>
 </svg>

@@ -4,7 +4,7 @@
   "description": "SVG banner generator and profile automation for GitHub",
   "private": true,
   "scripts": {
-    "generate": "node scripts/generate.js",
+    "generate": "node scripts/generate.js && python3 scripts/gen_terminal_svg.py",
     "preview": "npx --yes serve . -p 3456"
   },
   "keywords": ["github", "profile", "svg", "banner"],

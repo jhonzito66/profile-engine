@@ -200,7 +200,7 @@ function writeFile(relativePath, content) {
 }
 
 writeFile("assets/banner.svg", generateBanner());
-writeFile("assets/terminal.svg", generateTerminal());
+// terminal.svg is owned by scripts/gen_terminal_svg.py (neofetch style)
 writeFile("assets/languages.svg", generateLanguagesChart());
 for (const project of config.projects) {
   writeFile(`assets/cards/${project.id}.svg`, generateProjectCard(project));

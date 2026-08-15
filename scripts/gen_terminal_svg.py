@@ -27,37 +27,31 @@ RED      = "#FF5F56"
 TL_YELLOW = "#FFBD2E"
 TL_GREEN  = "#27C93F"
 
-SEP = "─" * 44
+SEP = "─" * 46
 
 def seg(text, color=WHITE):
     return (text, color)
 
-# None = linha vazia, "CURSOR" = prompt final com cursor piscando
+# None = blank line, "CURSOR" = final prompt with blinking cursor
 LINES = [
     [seg("jhonzito66", CYAN), seg("@", GRAY), seg("github", GREEN), seg(":~$ ", WHITE), seg("neofetch", YELLOW)],
     None,
     [seg("jhonzito66", CYAN), seg("@", GRAY), seg("github", GREEN)],
     [seg(SEP, GRAY)],
-    [seg("OS:      ", GREEN), seg("macOS Sonoma · MacBook Air")],
-    [seg("Host:    ", GREEN), seg("Forja Softwares LTDA")],
-    [seg("Role:    ", GREEN), seg("Full-Stack Engineer · Co-founder")],
-    [seg("IDE:     ", GREEN), seg("VSCode · Claude Code")],
+    [seg("OS:        ", GREEN), seg("macOS · Goiânia, Brazil")],
+    [seg("Role:      ", GREEN), seg("Full-Stack Software Developer")],
+    [seg("Company:   ", GREEN), seg("Forja Softwares")],
     [seg(SEP, GRAY)],
-    [seg("Code:    ", GREEN), seg("Java · TypeScript · Python · Dart", CYAN)],
-    [seg("Stack:   ", GREEN), seg("Spring Boot · Next.js · Flutter", CYAN)],
-    [seg("         ", WHITE),  seg("Fastify · PostgreSQL", CYAN)],
-    [seg("Human:   ", GREEN), seg("Português (BR) · English")],
+    [seg("Languages: ", GREEN), seg("TypeScript · Dart · Java · Python", CYAN)],
+    [seg("Stack:     ", GREEN), seg("Flutter · Node.js · PostgreSQL", CYAN)],
+    [seg("           ", WHITE), seg("Docker · SQLite · REST APIs", CYAN)],
     [seg(SEP, GRAY)],
-    [seg("Recent:  ", GREEN), seg("últimos mexidos", GRAY)],
-    [seg("● ", ORANGE), seg("GUME", ORANGE), seg("  ★", YELLOW)],
-    [seg("  → ", GRAY), seg("gume.online — pedidos WhatsApp")],
-    [seg("● ", ORANGE), seg("MaxSync", ORANGE)],
-    [seg("  → ", GRAY), seg("gestão de confinamento pecuário")],
+    [seg("Focus:     ", GREEN), seg("Mobile · Backend · Systems · Products")],
+    [seg("Spoken:    ", GREEN), seg("Português (BR) · English")],
     [seg(SEP, GRAY)],
-    [seg("Web:     ", GREEN), seg("forjasoftware.com.br", CYAN)],
-    [seg("IG:      ", GREEN), seg("instagram.com/forja_software", CYAN)],
-    [seg("Email:   ", GREEN), seg("forjasoftwaredeveloper@gmail.com")],
-    [seg("Local:   ", GREEN), seg("Goiânia, GO — Brasil")],
+    [seg("Web:       ", GREEN), seg("forjasoftware.com.br", CYAN)],
+    [seg("IG:        ", GREEN), seg("instagram.com/forja_software", CYAN)],
+    [seg("Seeking:   ", GREEN), seg("International opportunities")],
     [seg(SEP, GRAY)],
     "CURSOR",
 ]

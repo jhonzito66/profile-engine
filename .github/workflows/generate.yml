@@ -20,8 +20,12 @@ jobs:
         with:
           node-version: "20"
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Generate SVG assets
-        run: node scripts/generate.js
+        run: node scripts/generate.js && python3 scripts/gen_terminal_svg.py
 
       - name: Commit updated assets
         run: |

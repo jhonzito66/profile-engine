@@ -1,40 +1,48 @@
 <div align="center">
 
-<table border="0" cellspacing="0" cellpadding="16">
-<tr>
-<td valign="middle" align="center">
-<img src="./assets/profile.gif" width="360" style="border-radius:8px"/>
-</td>
-<td valign="middle" align="left">
 <img src="./assets/terminal.svg" width="510"/>
-</td>
-</tr>
-</table>
 
-<p>
-  <a href="https://forjasoftware.com.br" title="Forja Software">
-    <img src="./assets/logosolo.svg" height="44" alt="Forja Software"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.instagram.com/forja_software" title="Instagram @forja_software">
-    <img src="./assets/instagram.svg" height="44" alt="Instagram"/>
-  </a>
-</p>
-
-<p>
-  <a href="https://gume.online/"><strong>GUME</strong> → gume.online</a>
-</p>
-
----
-
-<img src="https://streak-stats.demolab.com/?user=jhonzito66&hide_border=true&background=0C0C0C&ring=00FF41&fire=FF5F56&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=E6E6E6&sideLabels=C9D1D9&dates=C9D1D9&border_radius=8"/>
+</div>
 
 <br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jhonzito66/jhonzito66/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jhonzito66/jhonzito66/output/github-contribution-grid-snake.svg"/>
-  <img alt="github contribution snake" src="https://raw.githubusercontent.com/jhonzito66/jhonzito66/output/github-contribution-grid-snake.svg"/>
-</picture>
+**Full-Stack Software Developer** — building software, systems & products.
+
+I work at [Forja Softwares](https://forjasoftware.com.br), a software development company focused on operational and business systems. My work spans mobile applications, backend APIs, databases, data synchronization, and infrastructure — across the full product, not just one layer.
+
+---
+
+## At Forja Softwares
+
+- Built and maintained a large operational management system with 100+ screens handling thousands of daily records
+- Developed offline-first mobile applications with real-time data synchronization across devices and backends
+- Integrated mobile software with external automation hardware for real-time operational data capture
+- Built reporting systems generating daily charts, calculations, and operational indicators
+- Worked on business process automation including document generation and workflow orchestration
+- Contributed across mobile, API, database, and infrastructure layers on every project
+
+---
+
+## Selected Projects
+
+| Project | Stack | |
+|---|---|---|
+| [**GUME**](https://gume.online) | TypeScript · Node.js · React | Restaurant order management |
+| [**APKMyFinance**](https://github.com/jhonzito66/apkmyfinance) | Flutter · Dart · SQLite | Personal finance mobile app |
+| [**Engineering OS**](https://github.com/jhonzito66/engineering-os) | Shell | Developer workflow automation |
+
+---
+
+## Stack
+
+`TypeScript` `Dart` `Python` `Java` `JavaScript` `SQL`  
+`Flutter` `Node.js` `PostgreSQL` `SQLite` `Docker` `REST APIs`  
+`PowerSync` `Git` `Linux`
+
+---
+
+<div align="center">
+
+[Forja Softwares](https://forjasoftware.com.br) &nbsp;·&nbsp; [Instagram](https://www.instagram.com/forja_software) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/YOUR_HANDLE_HERE)
 
 </div>
